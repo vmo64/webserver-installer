@@ -23,6 +23,5 @@ output "Automatic architecture detection initialized..."
     else
         output "Unsupported architecture detected! Please switch to 64-bit."
         exit 4
-    fi
     
     esac

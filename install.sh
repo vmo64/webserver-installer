@@ -73,6 +73,6 @@ clear
 echo "###################################################"
 echo "Installation completed!
 echo "HTML folder located under /ver/www/html/"
-echo "PhpMyAdmin is located at http://YOUR_SERVER_IP/phpmyadmin"
+echo "PhpMyAdmin is located at http://YOUR_SERVER_IP/phpmyadmin
 echo "We recommend you reboot the machine if you can!"
 echo "###################################################"

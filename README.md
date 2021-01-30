@@ -17,3 +17,5 @@ Debian/Ubuntu
 
 If you have any questions ask me on discord: NGX#6969
 Enjoy.
+
+Please note that this script is still in the testing phases and has no error detection/correction. It will keep running the commands no matter what. Please run as `sudo su -` for best result.

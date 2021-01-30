@@ -24,6 +24,7 @@ echo "###################################################"
 echo "Configuring Firewall (UFW)"
 echo "This may cause ssh to disconnect"
 echo "###################################################"
+systemctl start ufw
 ufw allow 80
 ufw allow 443
 ufw allow 22

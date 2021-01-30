@@ -17,7 +17,7 @@ A simple lamp install script made for debian
 - 64 Bit OS
 - Internet connection
 
-History:
+### History:
 *1.1 Release*
 - Fully automated setup
 - SSL addon added

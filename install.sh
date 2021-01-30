@@ -8,12 +8,12 @@ apt install -y aptitude
 apt-get -y install expect
 echo " "
 echo "###################################################"
-    echo  "LAMP Stack install Script"
-    echo  "Contact me on discord NGX#6969 if you have any questions"
-    echo "Do not run this script on a system with already installed/broken lamp stack or it will fail!"
-    echo "Continuing in 5 seconds...."
-	echo "###################################################"
-    sleep 5;
+echo  "LAMP Stack install Script"
+echo  "Contact me on discord NGX#6969 if you have any questions"
+echo "Do not run this script on a system with already installed/broken lamp stack or it will fail!"
+echo "Continuing in 5 seconds...."
+echo "###################################################"
+sleep 5;
 echo " "
 echo "###################################################"
 echo "Updating System!"

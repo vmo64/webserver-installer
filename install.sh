@@ -21,6 +21,15 @@ echo "###################################################"
 aptitude update >> lamp-install.log
 echo " "
 echo "###################################################"
+echo "Configuring Firewall (UFW)"
+echo "This may cause ssh to disconnect"
+echo "###################################################"
+ufw allow 80
+ufw allow 443
+ufw allow 22
+ufw allow 21
+echo " "
+echo "###################################################"
 echo "Installing Apache2 Web Server"
 echo "###################################################"
 aptitude install -y apache2 >> lamp-install.log

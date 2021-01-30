@@ -1,5 +1,6 @@
 # lampserver-installer
-A simple lamp install script made for debian
+A simple lamp install script made for ubuntu
+***This script does not work properly on debian***
 
 ## How to use LAMP script?
 1. Make sure you are root!
@@ -13,7 +14,7 @@ A simple lamp install script made for debian
 3. Run installer `sh ssl.sh`
 
 ## Requirements
-- Ubuntu/Debian 18.04/9 or above
+- Ubuntu 18.04 or above
 - 64 Bit OS
 - Internet connection
 

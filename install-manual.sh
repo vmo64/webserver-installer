@@ -1,6 +1,7 @@
 #!/bin/sh
 clear
 echo "###################################################"
+    echo "Please do not use this script anymore, support has ended"
     echo  "LAMP Stack install Script"
     echo  "Contact me on discord NGX#6969 if you have any questions"
     echo "Do not run this script on a system with already installed/broken lamp stack or it will fail!"
@@ -46,7 +47,6 @@ echo "###################################################"
 aptitude install -y php >> lamp-install.log
 aptitude install -y libapache2-mod-php >> lamp-install.log
 aptitude install -y php-mysql >> lamp-install.log
-aptitude-cache search php | grep php- >> lamp-install.log
 aptitude install -y php-redis php-zip >> lamp-install.log
 clear
 echo "###################################################"
@@ -73,7 +73,8 @@ sleep 2s;
 clear
 echo "###################################################"
 echo "Installation completed!"
-echo "HTML folder located under /ver/www/html/"
+echo "Please do not use this script anymore, support has ended"
+echo "HTML folder located under /var/www/html/"
 echo "PhpMyAdmin is located at http://YOUR_SERVER_IP/phpmyadmin"
 echo "We recommend you reboot the machine if you can!"
 echo "Install log is located in lamp-install.log"

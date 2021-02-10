@@ -24,11 +24,11 @@ echo "###################################################"
 echo "Configuring Firewall (UFW)"
 echo "This may cause ssh to disconnect"
 echo "###################################################"
-systemctl start ufw
-ufw allow 80
-ufw allow 443
-ufw allow 22
-ufw allow 21
+systemctl start ufw >> lamp-install.log
+ufw allow 80 >> lamp-install.log
+ufw allow 443 >> lamp-install.log
+ufw allow 22 >> lamp-install.log
+ufw allow 21 >> lamp-install.log
 echo " "
 echo "###################################################"
 echo "Installing Apache2 Web Server"
@@ -79,7 +79,6 @@ echo "###################################################"
 aptitude install -y php >> lamp-install.log
 aptitude install -y libapache2-mod-php >> lamp-install.log
 aptitude install -y php-mysql >> lamp-install.log
-aptitude-cache search php | grep php- >> lamp-install.log
 aptitude install -y php-redis php-zip >> lamp-install.log
 echo " "
 echo "###################################################"
@@ -115,7 +114,7 @@ echo " "
 echo " "
 echo "###################################################"
 echo "Installation completed!"
-echo "HTML folder located under /ver/www/html/"
+echo "HTML folder located under /var/www/html/"
 echo "PhpMyAdmin is located at http://YOUR_SERVER_IP/phpmyadmin"
 echo "We recommend you reboot the machine if you can!"
 echo "Install log is located in lamp-install.log"

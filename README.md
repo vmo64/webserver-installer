@@ -13,6 +13,17 @@ A simple lamp install script made for ubuntu
 2. Download installer: `wget -O install.sh https://raw.githubusercontent.com/vmo64/lampserver-installer/main/ssl.sh`
 3. Run installer `sh ssl.sh`
 
+## OS compatibility
+| Operating System | Version | Supported? |
+| --------------- | --------------- | --------------- |
+| Ubuntu | 20.04 | ✅ |
+|        | 18.04 | ✅ |
+| Debian | 11 | ❌ |
+|        | 10 | ❌ |
+|        | 9 | ❌ |
+| CentOS | 8 | ❌ |
+|        | 7 | ❌ |
+
 ## Requirements
 - Ubuntu 18.04 or above
 - 64 Bit OS

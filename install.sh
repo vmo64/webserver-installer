@@ -16,9 +16,10 @@ echo "###################################################"
 sleep 5;
 echo " "
 echo "###################################################"
-echo "Updating System!"
+echo "Pre-Installation Questions"
 echo "###################################################"
-aptitude update >> lamp-install.log
+echo " "
+read -p "Please enter the desired MySQL root password: " MYSQL_ROOT_PASS
 echo " "
 echo "###################################################"
 echo "Configuring Firewall (UFW)"
@@ -59,9 +60,9 @@ send \"n\r\"
 expect \"Change the root password? \[Y/n\] \"
 send \"y\r\"
 expect \"New password: \"
-send \"1234567890\r\"
+send \"$MYSQL_ROOT_PASS\r\"
 expect \"Re-enter new password: \"
-send \"1234567890\r\"
+send \"$MYSQL_ROOT_PASS\r\"
 expect \"Remove anonymous users? \[Y/n\] \"
 send \"y\r\"
 expect \"Disallow root login remotely? \[Y/n\] \"
@@ -72,6 +73,7 @@ expect \"Reload privilege tables now? \[Y/n\] \"
 send \"y\r\"
 expect eof
 ")
+# send \"1234567890\r\"
 echo " "
 echo "###################################################"
 echo "Installing PHP"
@@ -92,7 +94,7 @@ echo "###################################################"
 
 if [ ! -f /etc/phpmyadmin/config.inc.php ];
 then
-MYSQL_ROOT_PASS='1234567890'
+# MYSQL_ROOT_PASS='1234567890'
 
   echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2" | debconf-set-selections
   echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selections

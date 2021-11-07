@@ -10,7 +10,7 @@ A simple lamp install script made for ubuntu
 
 ## How to use SSL script?
 1. Make sure you are root!
-2. Download installer: `wget -O install.sh https://raw.githubusercontent.com/vmo64/lampserver-installer/main/ssl.sh`
+2. Download installer: `wget -O ssl.sh https://raw.githubusercontent.com/vmo64/lampserver-installer/main/ssl.sh`
 3. Run installer `sh ssl.sh`
 
 ## OS compatibility

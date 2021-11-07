@@ -37,5 +37,5 @@ A simple lamp install script made for ubuntu
 *1.0 Pre Release*
 - Semi automated LAMP install script
 
-If you have any questions ask me on discord: NGX#6969
+If you have any questions ask me on discord: NGX#9909
 Enjoy.

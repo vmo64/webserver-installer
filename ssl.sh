@@ -9,7 +9,7 @@ sudo apt install -y python3-certbot-apache >> x3-ssl.log
 echo " "
 echo "###################################################"
 echo "Let's Encrypt SSL Script"
-echo  "Contact me on discord NGX#6969 if you have any questions"
+echo  "Contact me on discord NGX#9909 if you have any questions"
 echo "Continuing in 5 seconds...."
 echo "###################################################"
 sleep 5;

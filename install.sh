@@ -9,7 +9,7 @@ apt-get -y install expect
 echo " "
 echo "###################################################"
 echo  "LAMP Stack install Script"
-echo  "Contact me on discord NGX#6969 if you have any questions"
+echo  "Contact me on discord NGX#9909 if you have any questions"
 echo "Do not run this script on a system with already installed/broken lamp stack or it will fail!"
 echo "Continuing in 5 seconds...."
 echo "###################################################"
@@ -39,16 +39,13 @@ systemctl status apache2 >> lamp-install.log
 systemctl is-enabled apache2 >> lamp-install.log
 echo " "
 echo "###################################################"
-echo "Installing MariaDB"
+echo "Installing and configuring MariaDB (MySQL)"
 echo "###################################################"
 aptitude install -y mariadb-server >> lamp-install.log
 aptitude install -y mariadb-client >> lamp-install.log
 systemctl status mariadb >> lamp-install.log
 systemctl is-enabled mariadb >> lamp-install.log
-echo " "
-echo "###################################################"
-echo "Configuring MariaDB"
-echo "###################################################"
+
 [ ! -e /usr/bin/expect ]
 SECURE_MYSQL=$(expect -c "
 
@@ -82,10 +79,6 @@ aptitude install -y php >> lamp-install.log
 aptitude install -y libapache2-mod-php >> lamp-install.log
 aptitude install -y php-mysql >> lamp-install.log
 aptitude install -y php-redis php-zip >> lamp-install.log
-echo " "
-echo "###################################################"
-echo "Restarting Apache2 service!"
-echo "###################################################"
 systemctl restart apache2 >> lamp-install.log
 echo " "
 echo "###################################################"

@@ -19,7 +19,10 @@ apt-get -y install expect
 #lamp script
 
 lamp () {
-
+echo "Installing LAMP stack"
+echo " "
+read -p "Please enter the desired MySQL root password: " MYSQL_ROOT_PASS
+echo " "
 echo "Installing Apache"
 aptitude install -y apache2 >> lamp-install.log
 
@@ -98,7 +101,10 @@ echo "###################################################"
 # lemp script
 
 lemp () {
-
+echo "Installing LEMP stack"
+echo " "
+read -p "Please enter the desired MySQL root password: " MYSQL_ROOT_PASS
+echo " "
 echo "Installing NGINX"
 aptitude install -y nginx >> lemp-install.log
 
@@ -195,6 +201,8 @@ echo "###################################################"
 
 mysql () {
 echo "Installing MariaDB (MySQL)"
+echo " "
+read -p "Please enter the desired MySQL root password: " MYSQL_ROOT_PASS
 aptitude install -y mariadb-server >> mysql-install.log
 aptitude install -y mariadb-client >> mysql-install.log
 [ ! -e /usr/bin/expect ]
@@ -228,15 +236,17 @@ echo "###################################################"
 
 phpmyadmin () {
 echo "Installing PhpMyAdmin"
+echo " "
+read -p "Please enter your MySQL root password: " PHPMYADMIN_MYSQL_ROOT_PASS
 if [ ! -f /etc/phpmyadmin/config.inc.php ];
 then
 
   echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2" | debconf-set-selections
   echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selections
   echo "phpmyadmin phpmyadmin/mysql/admin-user string root" | debconf-set-selections
-  echo "phpmyadmin phpmyadmin/mysql/admin-pass password $MYSQL_ROOT_PASS" | debconf-set-selections
-  echo "phpmyadmin phpmyadmin/mysql/app-pass password $MYSQL_ROOT_PASS" |debconf-set-selections
-  echo "phpmyadmin phpmyadmin/app-password-confirm password $MYSQL_ROOT_PASS" | debconf-set-selections
+  echo "phpmyadmin phpmyadmin/mysql/admin-pass password $PHPMYADMIN_MYSQL_ROOT_PASS" | debconf-set-selections
+  echo "phpmyadmin phpmyadmin/mysql/app-pass password $PHPMYADMIN_MYSQL_ROOT_PASS" |debconf-set-selections
+  echo "phpmyadmin phpmyadmin/app-password-confirm password $PHPMYADMIN_MYSQL_ROOT_PASS" | debconf-set-selections
 
   aptitude install -y phpmyadmin >> phpmyadmin-install.log
  fi
@@ -252,7 +262,24 @@ echo "Running SSL Script"
 apt install -y certbot >> ssl-install.log
 apt install -y python3-certbot-apache >> ssl-install.log
 apt install -y python3-certbot-nginx >> ssl-install.log
-certbot certonly -d sys_domain
+echo " "
+read -p "Please enter your domain: " sys_domain
+SERVER_IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+DOMAIN_RECORD=$(dig +short ${SYS_DOMAIN})
+if [ "${SERVER_IP}" != "${DOMAIN_RECORD}" ]; then
+  echo -e "\e[31m###################################################\e[0m"
+  echo -e "\e[31mThe entered domain does not resolve to the primary public IP of this server.\e[0m"
+  echo -e "\e[31mPlease make an A record pointing to your server's IP\e[0m"
+  echo -e "\e[31mPlease restart the script!\e[0m"
+  echo -e "\e[31m###################################################\e[0m"
+  exit
+else
+  echo -e "\e[32m###################################################\e[0m"
+  echo -e "\e[32mDomain resolved correctly, going further.\e[0m"
+  echo -e "\e[32m###################################################\e[0m"
+  certbot certonly -d sys_domain
+fi
+echo " "
 echo " "
 echo " "
 echo "###################################################"

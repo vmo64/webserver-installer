@@ -6,7 +6,13 @@ echo "###################################################"
 apt update
 apt install -y aptitude
 apt-get -y install expect
-
+if [ "$EUID" -ne 0 ]
+  then
+  echo -e "[\e[31mFAIL\e[0m] Script was not run as root!"
+  exit
+else
+  echo -e "[\e[32m OK \e[0m] Script was run by root!"
+fi
 
 
 #lamp script

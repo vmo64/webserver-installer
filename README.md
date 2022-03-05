@@ -1,17 +1,12 @@
-# lampserver-installer
-A simple lamp install script made for ubuntu
+# WebServer Essentials Installer
+This script saves you alot of time by preconfiguring the whole webserver stack
 ***This script does not work properly on debian***
 
-## How to use LAMP script?
+## How to use the script?
 1. Make sure you are root!
 2. Download installer: `wget -O install.sh https://raw.githubusercontent.com/vmo64/lampserver-installer/main/install.sh`
 3. Run installer `sh install.sh`
-4. LAMP Stack is installed on your machine!
-
-## How to use SSL script?
-1. Make sure you are root!
-2. Download installer: `wget -O ssl.sh https://raw.githubusercontent.com/vmo64/lampserver-installer/main/ssl.sh`
-3. Run installer `sh ssl.sh`
+4. WebServer is installed on your machine!
 
 ## OS compatibility
 | Operating System | Version | Supported? |
@@ -30,6 +25,13 @@ A simple lamp install script made for ubuntu
 - Internet connection
 
 ### History:
+*2.0 Release*
+- Renamed repository from `lampserver-installer` to `webserver-installer`
+- Added a menu with more options
+- Added NGINX stack support
+- Added individual options
+- Integrated SSL script into the main menu 
+
 *1.1 Release*
 - Fully automated setup
 - SSL addon added
@@ -37,5 +39,4 @@ A simple lamp install script made for ubuntu
 *1.0 Pre Release*
 - Semi automated LAMP install script
 
-If you have any questions ask me on discord: NGX#9909
 Enjoy.

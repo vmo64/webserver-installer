@@ -4,7 +4,7 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 
 ## How to use the script?
 1. Make sure you are root! (by doing ``sudo su``)
-2. Download and run installer: `curl https://raw.githubusercontent.com/vmo64/lampserver-installer/main/install.sh | bash`
+2. Download and run installer: `wget https://raw.githubusercontent.com/vmo64/lampserver-installer/main/install.sh` then `sudo bash install.sh`
 3. WebServer is installed on your machine!
 
 ## OS compatibility

@@ -2,8 +2,8 @@
 echo "###################################################"
 echo "Preparing to launch script and installing prerequisites!"
 echo "Please wait!"
-echo "###################################################"
-if [ "$EUID" -ne 0 ] 
+echo "###################################################" 
+if [ "$EUID" -ne 0 ]
   then
   echo -e "[\e[31mFAIL\e[0m] Script was not run as root, exiting!"
   exit

@@ -262,7 +262,7 @@ apt install -y certbot >> ssl-install.log
 apt install -y python3-certbot-apache >> ssl-install.log
 apt install -y python3-certbot-nginx >> ssl-install.log
 echo " "
-read -p "Please enter your domain: " sys_domain
+read -p "Please enter your domain: " SYS_DOMAIN
 SERVER_IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 DOMAIN_RECORD=$(dig +short ${SYS_DOMAIN})
 if [ "${SERVER_IP}" != "${DOMAIN_RECORD}" ]; then

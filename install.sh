@@ -312,44 +312,43 @@ echo " "
 echo "Enter the option you want to run below (eg. 1), if the script quits then you have entered an invalid option."
 echo "###################################################"
 echo " "
-read -p "Please enter the desired option: " SELECTION
+read -p "Please enter the desired option: " MAINSELECTION
 echo " "
 
 
-if [[ $SELECTION == "1" ]]
+if [[ $MAINSELECTION = "1" ]]
 then
     lamp
 fi
 
-if [[ $SELECTION == "2" ]]
+if [[ $MAINSELECTION = "2" ]]
 then
     lemp
 fi
 
-if [[ $SELECTION == "3" ]]
+if [[ $MAINSELECTION = "3" ]]
 then
     apache
 fi
 
-if [[ $SELECTION == "4" ]]
+if [[ $MAINSELECTION = "4" ]]
 then
     nginx
 fi
 
-if [[ $SELECTION == "5" ]]
+if [[ $MAINSELECTION = "5" ]]
 then
     mysql
 fi
 
-if [[ $SELECTION == "6" ]]
+if [[ $MAINSELECTION = "6" ]]
 then
     phpmyadmin
 fi
 
-if [[ $SELECTION == "7" ]]
+if [[ $MAINSELECTION = "7" ]]
 then
     ssl
 fi
 
-}
 

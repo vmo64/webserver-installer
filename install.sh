@@ -139,7 +139,7 @@ echo "Installing PHP"
 aptitude install -y php >> lemp-install.log
 aptitude install -y php-mysql >> lemp-install.log
 aptitude install -y php-redis php-zip >> lemp-install.log
-service apache2 restart >> lemp-install.log
+
 
 echo " "
 echo "Installing PhpMyAdmin"

@@ -6,7 +6,7 @@ echo "###################################################"
 if [ "$EUID" -ne 0 ] 
   then
   echo -e "[\e[31mFAIL\e[0m] Script was not run as root, exiting!"
-#  exit
+  exit
 else
   echo -e "[\e[32m OK \e[0m] Script was run by root, continuing!"
 fi

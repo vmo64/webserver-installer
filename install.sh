@@ -1,11 +1,9 @@
 #!/bin/bash
-echo "###################################################"
-echo "Preparing to launch script and installing prerequisites!"
-echo "Please wait!"
-echo "###################################################" 
 apt update
+apt install -y lolcat
 apt install -y aptitude
 apt-get -y install expect
+echo " "
 if [ "$EUID" -ne 0 ]
   then
   echo -e "[\e[31mFAIL\e[0m] Script was not run as root!"

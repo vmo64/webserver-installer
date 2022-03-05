@@ -3,10 +3,9 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 ***This script does not work properly on debian***
 
 ## How to use the script?
-1. Make sure you are root!
-2. Download installer: `wget -O install.sh https://raw.githubusercontent.com/vmo64/lampserver-installer/main/install.sh`
-3. Run installer `sh install.sh`
-4. WebServer is installed on your machine!
+1. Make sure you are root! (by doing ``sudo su``)
+2. Download and run installer: `curl https://raw.githubusercontent.com/vmo64/lampserver-installer/main/install.sh | bash`
+3. WebServer is installed on your machine!
 
 ## OS compatibility
 | Operating System | Version | Supported? |

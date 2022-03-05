@@ -276,7 +276,7 @@ else
   echo -e "\e[32m###################################################\e[0m"
   echo -e "\e[32mDomain resolved correctly, going further.\e[0m"
   echo -e "\e[32m###################################################\e[0m"
-  certbot certonly -d sys_domain
+  certbot certonly -d $SYS_DOMAIN
 fi
 echo " "
 echo " "

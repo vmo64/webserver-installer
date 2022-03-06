@@ -1,6 +1,5 @@
 # WebServer Essentials Installer
 This script saves you alot of time by preconfiguring the whole webserver stack
-***This script does not work properly on debian***
 
 ## How to use the script?
 1. Make sure you are root! (by doing ``sudo su``)

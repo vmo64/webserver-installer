@@ -1,4 +1,9 @@
 # WebServer Essentials Installer
+
+.. image:: https://img.shields.io/badge/version-latest-brightgreen
+   :target: #
+   :alt: latest release
+   
 This script saves you alot of time by preconfiguring the whole webserver stack
 
 ## How to use the script?

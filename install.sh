@@ -1,6 +1,6 @@
 #!/bin/bash
+echo "######### RUNNING SCRIPT #########"
 apt update
-apt install -y lolcat
 apt install -y aptitude
 apt-get -y install expect
 echo " "

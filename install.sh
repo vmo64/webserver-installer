@@ -175,25 +175,25 @@ echo "###################################################"
 
 
 apache () {
-echo "Installing Apache2" | lolcat
+echo "Installing Apache2"
 aptitude install -y apache2 >> apache-install.log
 echo " "
 echo " "
-echo "###################################################" | lolcat
-echo "Installed Apache2" | lolcat
-echo "HTML folder located under /var/www/html" | lolcat
-echo "###################################################" | lolcat
+echo "###################################################"
+echo "Installed Apache2"
+echo "HTML folder located under /var/www/html"
+echo "###################################################"
 }
 
 nginx () {
-echo "Installing NGINX" | lolcat
+echo "Installing NGINX"
 aptitude install -y nginx >> nginx-install.log
 echo " "
 echo " "
-echo "###################################################" | lolcat
-echo "Installed NGINX" | lolcat
-echo "HTML folder located under /var/www/html" | lolcat
-echo "###################################################" | lolcat
+echo "###################################################"
+echo "Installed NGINX"
+echo "HTML folder located under /var/www/html"
+echo "###################################################"
 }
 
 mysql () {
@@ -226,13 +226,13 @@ expect eof
 ")
 echo " "
 echo " "
-echo "###################################################" | lolcat
-echo "Installed MySQL" | lolcat
-echo "###################################################" | lolcat
+echo "###################################################"
+echo "Installed MySQL"
+echo "###################################################"
 }
 
 phpmyadmin () {
-echo "Installing PhpMyAdmin" | lolcat
+echo "Installing PhpMyAdmin"
 echo " "
 read -p "Please enter your MySQL root password: " PHPMYADMIN_MYSQL_ROOT_PASS
 if [ ! -f /etc/phpmyadmin/config.inc.php ];
@@ -249,13 +249,13 @@ then
  fi
 echo " "
 echo " "
-echo "###################################################" | lolcat
-echo "Installed PhpMyAdmin" | lolcat
-echo "###################################################" | lolcat
+echo "###################################################"
+echo "Installed PhpMyAdmin"
+echo "###################################################"
 }
 
 ssl () {
-echo "Running SSL Script" | lolcat
+echo "Running SSL Script"
 apt install -y certbot >> ssl-install.log
 apt install -y python3-certbot-apache >> ssl-install.log
 apt install -y python3-certbot-nginx >> ssl-install.log
@@ -279,9 +279,9 @@ fi
 echo " "
 echo " "
 echo " "
-echo "###################################################" | lolcat
-echo "SSL Script Finished" | lolcat
-echo "###################################################" | lolcat
+echo "###################################################"
+echo "SSL Script Finished"
+echo "###################################################"
 }
 
 
@@ -291,30 +291,30 @@ echo "###################################################" | lolcat
 
 
 echo " "
-echo "###################################################" | lolcat
-echo "WebServer Stack installer script by vmo64" | lolcat
-echo "NOTE: Run this on a clean system install for a good install" | lolcat
-echo "Starting install in 5 seconds..." | lolcat
-echo "###################################################" | lolcat
+echo "###################################################"
+echo "WebServer Stack installer script by vmo64"
+echo "NOTE: Run this on a clean system install for a good install"
+echo "Starting install in 5 seconds..."
+echo "###################################################"
 sleep 5;
 echo " "
-echo "###################################################" | lolcat
-echo "Install options:" | lolcat
+echo "###################################################"
+echo "Install options:"
 echo " "
 echo " "
-echo "Stack options:" | lolcat
-echo "1 - Install LAMP Stack (Linux, Apache, MySQL, PHP + PhpMyAdmin)" | lolcat
-echo "2 - Install LEMP Stack (Linux, NGINX, MySQL, PHP + PhpMyAdmin)" | lolcat
+echo "Stack options:"
+echo "1 - Install LAMP Stack (Linux, Apache, MySQL, PHP + PhpMyAdmin)"
+echo "2 - Install LEMP Stack (Linux, NGINX, MySQL, PHP + PhpMyAdmin)"
 echo " "
-echo "Individual options:" | lolcat
-echo "3 - Install Apache2" | lolcat
-echo "4 - Install NGINX" | lolcat
-echo "5 - Install MySQL" | lolcat
-echo "6 - Install PhpMyAdmin" | lolcat
-echo "7 - Run SSL Script" | lolcat
+echo "Individual options:"
+echo "3 - Install Apache2"
+echo "4 - Install NGINX"
+echo "5 - Install MySQL"
+echo "6 - Install PhpMyAdmin"
+echo "7 - Run SSL Script"
 echo " "
-echo "Enter the option you want to run below (eg. 1), if the script quits then you have entered an invalid option." | lolcat
-echo "###################################################" | lolcat
+echo "Enter the option you want to run below (eg. 1), if the script quits then you have entered an invalid option."
+echo "###################################################"
 echo " "
 read -p "Please enter the desired option: " MAINSELECTION
 echo " "

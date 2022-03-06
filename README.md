@@ -2,6 +2,8 @@
 
 <a href="#">
     <img src="https://img.shields.io/badge/version-latest-brightgreen.svg" /></a>
+<a href="https://github.com/vmo64/webserver-installer/releases/tag/2.0">
+    <img src="https://img.shields.io/badge/latest%20release-2.0-blue.svg" /></a>
    
 This script saves you alot of time by preconfiguring the whole webserver stack
 

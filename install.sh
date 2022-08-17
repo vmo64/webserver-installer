@@ -18,7 +18,7 @@ fi
 lamp () {
 echo "Installing LAMP stack"
 echo " "
-read -p "Please enter the desired MySQL root password: " MYSQL_ROOT_PASS
+read -p "Please enter the desired MySQL root password: " -s MYSQL_ROOT_PASS
 echo " "
 echo "Installing Apache"
 aptitude install -y apache2 >> lamp-install.log
@@ -100,7 +100,7 @@ echo "###################################################"
 lemp () {
 echo "Installing LEMP stack"
 echo " "
-read -p "Please enter the desired MySQL root password: " MYSQL_ROOT_PASS
+read -p "Please enter the desired MySQL root password: " -s MYSQL_ROOT_PASS
 echo " "
 echo "Installing NGINX"
 aptitude install -y nginx >> lemp-install.log
@@ -199,7 +199,7 @@ echo "###################################################"
 mysql () {
 echo "Installing MariaDB (MySQL)"
 echo " "
-read -p "Please enter the desired MySQL root password: " MYSQL_ROOT_PASS
+read -p "Please enter the desired MySQL root password: " -s MYSQL_ROOT_PASS
 aptitude install -y mariadb-server >> mysql-install.log
 aptitude install -y mariadb-client >> mysql-install.log
 [ ! -e /usr/bin/expect ]
@@ -234,7 +234,7 @@ echo "###################################################"
 phpmyadmin () {
 echo "Installing PhpMyAdmin"
 echo " "
-read -p "Please enter your MySQL root password: " PHPMYADMIN_MYSQL_ROOT_PASS
+read -p "Please enter your MySQL root password: " -s PHPMYADMIN_MYSQL_ROOT_PASS
 if [ ! -f /etc/phpmyadmin/config.inc.php ];
 then
 

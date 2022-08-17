@@ -16,10 +16,11 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 | Operating System | Version | Supported? |
 | --------------- | --------------- | --------------- |
 | Ubuntu | 22.04 LTS | ✅ |
-| Ubuntu | 20.04 LTS | ✅ |
+|        | 20.04 LTS | ✅ |
 |        | 18.04 LTS | ✅ |
-| Debian | 11 | ❌ |
-|        | 10 | ❌ |
+| Debian | 11 | ❓ |
+|        | 10 | ❓ |
+|        | 9  | ❓ |
 |        | 9 | ❌ |
 | CentOS | 8 | ❌ |
 |        | 7 | ❌ |

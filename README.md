@@ -32,6 +32,13 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 ## Features and options
 | Option | Option No. | Support Status |
 | --------------- | --------------- | --------------- |
+| LAMP | 1 | ✅ |
+| LEMP | 2 | ❓ |
+| Apache | 3 | ✅ |
+| NGINX | 4 | ✅ |
+| MySQL | 5 | ✅ |
+| phpMyAdmin | 6 | ✅ |
+| SSL Script | 7 | ✅ |
 
 ## Requirements
 - 64 Bit OS

@@ -25,8 +25,9 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 | CentOS | 8 | ❌ |
 |        | 7 | ❌ |
 
+*Note: This script does work on Debian systems but some phpMyAdmin problems may happen.*
+
 ## Requirements
-- Ubuntu 18.04 or above
 - 64 Bit OS
 - Internet connection
 

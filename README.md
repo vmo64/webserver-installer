@@ -15,8 +15,9 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 ## OS compatibility
 | Operating System | Version | Supported? |
 | --------------- | --------------- | --------------- |
-| Ubuntu | 20.04 | ✅ |
-|        | 18.04 | ✅ |
+| Ubuntu | 22.04 LTS | ✅ |
+| Ubuntu | 20.04 LTS | ✅ |
+|        | 18.04 LTS | ✅ |
 | Debian | 11 | ❌ |
 |        | 10 | ❌ |
 |        | 9 | ❌ |

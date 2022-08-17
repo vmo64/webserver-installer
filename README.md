@@ -9,8 +9,10 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 
 ## How to use the script?
 1. Make sure you are root! (by doing ``sudo su``)
-2. Download and run installer: `wget https://raw.githubusercontent.com/vmo64/lampserver-installer/main/install.sh` then `sudo bash install.sh`
-3. WebServer is installed on your machine!
+2. Download and run installer: `wget https://raw.githubusercontent.com/vmo64/lampserver-installer/main/install.sh` then `bash install.sh`
+3. Select the option you want from the list (entering an invalid option makes the script exit)
+4. Enter the information required
+3. The option you have selected is installed
 
 ## OS compatibility
 | Operating System | Version | Supported? |
@@ -26,6 +28,10 @@ This script saves you alot of time by preconfiguring the whole webserver stack
 |        | 7 | ❌ |
 
 *Note: This script does work on Debian systems but some phpMyAdmin problems may happen.*
+
+## Features and options
+| Option | Option No. | Support Status |
+| --------------- | --------------- | --------------- |
 
 ## Requirements
 - 64 Bit OS
